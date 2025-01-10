@@ -16,7 +16,7 @@ load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-PORT=os.getenv("PORT")
+PORT=os.getenv("PORT", 8080)
 ORIGIN_URL_PROD=os.getenv("ORIGIN_PROD")
 
 app = Flask(__name__)
